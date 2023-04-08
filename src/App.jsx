@@ -1,9 +1,16 @@
 import './App.css'
+import Meals from './Meals'
+import Search from './Search'
+import Modal from './Modal'
+import Favorites from './Favorites'
 
 export default function App() {
   return (
-    <main>
-      React ⚛️ + Vite ⚡ + Replit 🌀
-    </main>
+    <div>
+      {/*<Search />*/}
+      {/*<Favorites />*/}
+      <Meals />
+      {/*<Modal />*/}
+    </div>
   )
 }
