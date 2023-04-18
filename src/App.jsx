@@ -1,16 +1,16 @@
 import './App.css'
-import Meals from './Meals'
-import Search from './Search'
-import Modal from './Modal'
-import Favorites from './Favorites'
+import Meals from './components/Meals'
+import Search from './components/Search'
+import Modal from './components/Modal'
+import Favorites from './components/Favorites'
 
 export default function App() {
   return (
-    <div>
-      {/*<Search />*/}
-      {/*<Favorites />*/}
+    <div className="relative bg-[#faf9ec]">
+      <Search />
+      <Favorites />
       <Meals />
-      {/*<Modal />*/}
+{/*       <Modal /> */}
     </div>
   )
 }
