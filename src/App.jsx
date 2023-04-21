@@ -7,7 +7,7 @@ import {useGlobalContext} from './AppContext'
 
 export default function App() {
 
-  const {showModal}=useGlobalContext()
+  const { showModal }=useGlobalContext()
   
   return (
     <div className="relative bg-[#faf9ec]">
