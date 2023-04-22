@@ -6,10 +6,6 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
 
-  const mealByName = "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
-
-
-
   //To show modal
   const [showModal, setShowModal] = useState(false)
 
@@ -80,9 +76,12 @@ const AppProvider = ({ children }) => {
     setLoading(false)
   }
 
+  
   useEffect(() => {
     allMeals();
   }, [])
+
+  
 
   useEffect(() => {
     if (!input) return

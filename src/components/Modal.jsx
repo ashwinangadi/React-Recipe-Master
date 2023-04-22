@@ -17,7 +17,7 @@ const Modal = () => {
 </svg>
 
 
-  const close = <svg xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-8 h-8">
+  const close = <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-8 h-8">
   <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 
@@ -28,11 +28,10 @@ const Modal = () => {
 
   const ingridient = Object.keys(selectedMeal).filter(ele => ele.includes("strIngredient") && selectedMeal[ele] && selectedMeal[ele].length > 0).map(ele => selectedMeal[ele])
   const measurement = Object.keys(selectedMeal).filter(ele => ele.includes("strMeasure") && selectedMeal[ele] && selectedMeal[ele].length > 0).map(ele => selectedMeal[ele])
-  console.log(ingridient)
 
   return (
     <div className="grid place-items-center p-14 fixed left-0 top-0 z-30 bg-gray-500 bg-opacity-75 transition-opacity flex justify-center items-center h-full w-full overflow-y-scroll no-scrollbar overflow-x-hidden outline-none " onClick={() => setShowModal(false)}>
-      <div className="place-self-end -mb-4 ml-5 cursor-pointer ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 duration-300 stroke-1 hover:fill-blue-500 z-50 text-3xl" onClick={()=> setShowModal(false)}>{close}</div>
+      <div className="place-self-end -mb-4 ml-5 cursor-pointer ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 duration-300 stroke-1 fill-gray-500 hover:fill-rose-500 z-50 text-3xl" onClick={()=> setShowModal(false)}>{close}</div>
       <div className="relative w-[95vw] md:w-[700px] bg-white p-1 rounded-xl font-sans" onClick={(e) => e.stopPropagation()}>
         
         <div className="relative bg-cover bg-center h-64 w-full rounded-md text-center" style={{ backgroundImage: `url(${selectedMeal.strMealThumb})` }}>

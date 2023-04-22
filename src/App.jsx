@@ -10,7 +10,7 @@ export default function App() {
   const { showModal }=useGlobalContext()
   
   return (
-    <div className="relative bg-[#faf9ec]">
+    <div className="relative bg-[#e9ecef]">
       <Search />
       <Favorites />
       <Meals />
