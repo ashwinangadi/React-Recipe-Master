@@ -41,7 +41,7 @@ const Meals = () => {
                 setSelectedMeal(item)
                 setShowModal(true)
               }}> 
-              <img src={item.strMealThumb}/>
+              <img src={item.strMealThumb} loading="lazy"/>
               <div  className={`absolute fill-gray-100 hover:fill-rose-500 top-0 right-0 cursor-pointer ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 duration-300`} onClick={(e)=>{e.stopPropagation(); addFavorite(item) }}>{heartFillSVG}</div>
               <div className="absolute tracking-widest flex items-center justify-center text-3xl inset-x-0 bottom-3  mx-3 font-mono text-white backdrop-brightness-50 bg-white/10 max-h-full p-2 ">{item.strMeal}</div>
             </div>)

@@ -16,7 +16,7 @@ const Favorites = () => {
       <div className="flex row-span-2 ">{favorites.map((ele)=>{
           return(
             <div key={ele.idMeal} className="mx-2 mt-3 border-2 border-white relative bg-white h-20 w-20 pb-3 drop-shadow-xl rounded-full bg-[#f3edde] transition  ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 duration-300 cursor-pointer opacity-80 hover:opacity-100" onClick={()=>{setSelectedMeal(ele); setShowModal(true)}}> 
-                  <img className="rounded-full" src={ele.strMealThumb}/>
+                  <img className="rounded-full" src={ele.strMealThumb} loading="lazy"/>
                   
                   <div className="absolute flex justify-center text-sm inset-x-0 -bottom-1 text-white backdrop-brightness-50 bg-white/5 h-1/2 max-h-full w-full">{ele.strMeal}</div>
               <div className="place-self-end -mb-4 ml-5 cursor-pointer ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 duration-300 stroke-1 fill-gray-500 hover:fill-rose-500 z-50 text-3xl" onClick={(e)=>{e.stopPropagation(); removeFavorite(ele.idMeal)} }>{close}</div>
